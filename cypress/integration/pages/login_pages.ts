@@ -18,8 +18,8 @@ export class LoginPage{
         cy.get(this.btn_login).click()
     }
     assertLogin(){
-        cy.get('.title').should('be.visible')
-        cy.get('.peek').should('be.visible')
+        cy.get('[class="title"]').should('be.visible')
+        cy.get('[alt="Sauce Labs Backpack"]').should('be.visible')
         cy.contains('Products').should('contain','Products')
     }
     assertLoginFail(){
